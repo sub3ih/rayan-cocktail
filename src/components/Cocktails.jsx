@@ -34,58 +34,44 @@ ptl.from('#c-left-leaf',{
 
 
 
-<div className = 'list'>
-    <div className = 'popular'>
-        <h2>Most Popular Cocks</h2>
+<div className="list">
+  <div className="popular">
+    <h2>Most Popular Cocks</h2>
 
-        <ul>
-{cocktailLists.map(({name,country,detail,price}) => {
-    <li key = {name}>
-<div className = "md:me-28">
-<h3>{name}</h3>
-<p>{country} | {detail}</p>
-</div>
-<span>- {price}</span>
-    </li>
-})}
-        </ul>
+    <ul>
+      {cocktailLists.map(({ name, country, detail, price }) => (
+        <li key={name}>
+          <div className="md:me-28">
+            <h3>{name}</h3>
+            <p>
+              {country} | {detail}
+            </p>
+          </div>
+          <span>- {price}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div className="loved">
+    <div className="popular">
+      <h2>Most Popular Mocktails</h2>
+
+      <ul>
+        {mockTailLists.map(({ name, country, detail, price }) => (
+          <li key={name}>
+            <div className="me-28">
+              <h3>{name}</h3>
+              <p>
+                {country} | {detail}
+              </p>
+            </div>
+            <span>- {price}</span>
+          </li>
+        ))}
+      </ul>
     </div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
-<div className = 'loved'>
-    <div className = 'popular'>
-        <h2>Most Popular Mocktails</h2>
-
-        <ul>
-{mockTailLists.map(({name,country,detail,price}) => {
-    <li key = {name}>
-<div className = "me-28">
-<h3>{name}</h3>
-<p>{country} | {detail}</p>
-</div>
-<span>- {price}</span>
-    </li>
-})}
-        </ul>
-    </div>
-
-
-
-
-
-
-
-
+  </div>
 </div>
 
 
